@@ -1,16 +1,29 @@
+<?php
+if(isset($_POST['contact_btn'])){
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  $subject=$_POST['subject'];
+  $comment=$_POST['comment'];
+  $to="flymingoconsults@gmail.com";
+  $header="from:$email";
+  if(mail($to,$subject,$comment,$header)){$comment1="Message submitted successfully";
+  }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-  <title>flymingo consults</title>
+  <title>flymingo Consults Ghana</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
@@ -41,8 +54,8 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>Flymingo Consults</h1> 
-  <p>We specialize in Full stack Web development, Building Contruction, Photography and video production,  </p> 
+  <h1><strong>Flymingo Consults</strong></h1> 
+  <h5>The Best Solution for:  Full stack Web development | Software Development | Social Media Marketing | Photography | Graphics Design | video production | Sound Engineering  </h5> 
   <form>
     <div class="input-group">
       <input type="email" class="form-control" size="50" placeholder="Email Address" required>
@@ -60,19 +73,25 @@
       <h2>WHO ARE WE?</h2><br>
       <h4>
         Flymingo Consults Ltd. started as a recording studio known as fire flames multimedia in Tumu a town in the Upper West Region of Ghana. 
-        Ever since we commenced business in 2011, after five years of opperation it was moved to the Upper West Regional capital Wa in 2015.
-         we have earned ourselves a track record of successful event organisations and training of individuals in sound engineering and photography in the entertainment industry.
-        
-        We pride ourselves in having a strong rapport with our clients and suppliers, a dedicated and experienced management
-         team and an experienced crew with a commitment to continuous improvement.
-        
-        Flymingo Consults embodies a professional, highly skilled and experienced team with over 10 years of combined industry experience. This 
+        Ever since we commenced business in 2011, we have been the best in the field of I.T hardware/software mantance and repair, Photography, 
+        Sound Engineering, Web Development, Graphics Designs, Events Organisation and Software Development.
+        <br>
+        After five years of opperation we moved to the Upper West Regional capital Wa in 2015.
+        We have earned ourselves a track record of successes in our field of works, covering over 1000 events and training of over 2000 people 
+        in our fields of work on our youtube and socail media handles.
+      </br>
+       <br> 
+        Flymingo Consults embodies a professional, highly skilled and experience with over 10 years of industry experience. This 
         team has executed projects of various sizes from all over Ghana. With some of the most intelligent minds on our team; giving us the depth and indigenous
-         ‘on the job’ experience, we always come up on top of our game. As of this writing, our team is 10-member strong and growing by the week.</h4><br>
-
-      <p>We major in Photography and Videography, Events planning and organisation, website develoment, apps and software development, General painting and decoration and fixing of Raising damp.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+         ‘on the job’ experience, we always come up on top of our game. </h4></br>
+      </br>
+      <p> We major in Full Stack Web Development | Social Media Marketing | Software Development | Photography | Graphics Design | video production | Sound Engineering</p>
+      <br><button class="btn btn-default btn-lg"><a href="mailto:flymingoconsults@gmail.com">Get in Touch</a></button>
     </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5192010405728507"
+     crossorigin="anonymous"></script>
+
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
     </div>
@@ -86,13 +105,14 @@
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission is to be the leading web developer, Photography and video production company in the global market.
+      <h4><strong>MISSION:</strong> Our mission is to provided quality services to our clients in the global market.
         To become the customers' most preferred choice by attaining excellence in quality and timely completed value added projects. 
-        To provide the highest level of service in the construction industry while offering superior craftsmanship to every project, we handle.
+        To provide the highest level of service in the I.T industry while offering superior craftsmanship to every project, we handle.
         To continually innovate, develop and adopt state-of-the-art technology in methods and materials to enhance productivity and cost effectiveness.
         To continually improve the competence of our team, and employ diverse, innovative & results-oriented personals, motivated to deliver excellence.
         To build a safety culture aimed at continually reducing the frequency severity rate towards achieving zero accidents.
         To identify and mitigate all the environmental impacts arising from our activities, and comply with applicable environmental norms.</h4><br>
+
       <p><strong>VISION:</strong> Our vision is to become the leading technological firm, while delivering projects that consistently exceed international
          standards and provide exceptional customer satisfaction.
         To continually deliver excellent value & innovative construction solutions to meet our clients' requirements.
@@ -131,11 +151,7 @@
       <h4>WEB DEVELOPMENT</h4>
       <p>We are the first name that comes in mind when it comes to web development in th northern part of Ghana.....</p>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-chevron-up logo-small"></span>
-      <h4>PAINTING AND DECO</h4>
-      <p>When it comes to painting or decorations we offer the best service to our clients....</p>
-    </div>
+    
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4 style="color:#303030;">WE NEVER DISAPPOINT</h4>
@@ -143,6 +159,9 @@
     </div>
   </div>
 </div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5192010405728507"
+     crossorigin="anonymous"></script>
 
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
@@ -169,7 +188,7 @@
         </p>
       </div>
       <div class="col-sm-4">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/i42eJu-B-Vw" 
+        <iframe width="280" height="158" src="https://www.youtube.com/embed/i42eJu-B-Vw" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
@@ -223,73 +242,6 @@
   </div>
 </div>
 
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
-  </div>
-  <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Basic</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$30</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>     
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$40</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>       
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$50</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>    
-  </div>
-</div>
-
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
@@ -300,8 +252,13 @@
       <p><span class="glyphicon glyphicon-phone"></span> +233 500 948 291</p>
       <p><span class="glyphicon glyphicon-envelope"></span> flymingoconsults@gmail.com</p>
     </div>
-    <form action="mailto:flymingoconsults@gmail.com" method="post" enctype="text/plain">
+
+    <form action="welcome.php" method="post" enctype="text/plain">
     <div class="col-sm-7 slideanim">
+      <strong>
+        <?php if(!empty($comment1)){ echo $comment1;
+        } ?>
+      </strong>
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -323,6 +280,9 @@
 <!-- Image of location/map -->
 <img src="loc 1.png" class="w3-image w3-greyscale-min" style="width:100%">
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5192010405728507"
+     crossorigin="anonymous"></script>
+
 <footer class="container-fluid text-center">
   <!-- Add font awesome icons -->
 <a href="https://web.facebook.com/eddyfreshtv/" class="fa fa-facebook"></a>
@@ -336,45 +296,9 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Flymingo Consults (C)Copy Right </p>
+  <p>Flymingo Consults Ghana (C)Copy Right </p>
 </footer>
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
 
 </body>
 </html>
