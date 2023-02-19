@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['contact_btn'])){
+if(isset($_POST['send_btn'])){
   $name=$_POST['name'];
   $email=$_POST['email'];
   $subject=$_POST['subject'];
